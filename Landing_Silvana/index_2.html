@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<!-- Declara que el documento usa HTML5 -->
+<html lang="es">
+<!-- Raíz del documento; lang="es" ayuda a lectores de pantalla y buscadores -->
+<head>
+  <!-- Contiene metadatos: no se muestra en pantalla -->
+  <meta charset="UTF-8" />
+  <!-- Codificación de caracteres: permite tildes y ñ correctamente -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Hace que la página se adapte al ancho del teléfono -->
+  <title>Fonoaudiologa Silvana Luna</title>
+  <!-- Título de la pestaña y de Google. Reemplazar el marcador por el nombre real -->
+  <meta name="description" content="Acompañamiento fonoaudiológico cercano y personalizado. Consultá disponibilidad por WhatsApp o email." />
+  <!-- Descripción que puede aparecer en los resultados de búsqueda -->
+  <meta name="theme-color" content="#4f6f5b" />
+  <!-- Color de la barra del navegador en móviles -->
+  <meta property="og:title" content="Fonoaudiología personalizada" />
+  <!-- Título al compartir el enlace en redes -->
+  <meta property="og:description" content="Consultá disponibilidad para una primera consulta fonoaudiológica." />
+  <!-- Descripción al compartir el enlace en redes -->
+  <meta property="og:type" content="website" />
+  <!-- Tipo de contenido para redes sociales -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <!-- Acelera la conexión con Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Acelera la descarga de los archivos de fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <!-- Carga 2 familias: Fraunces (títulos) e Inter (texto). Si fallan, el CSS usa fuentes del sistema -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Enlaza la hoja de estilos del proyecto -->
+  <script>document.documentElement.classList.add('js');</script>
+  <!-- Marca que JavaScript funciona; permite ocultar elementos para animarlos sin riesgo de dejarlos invisibles -->
+</head>
+<body>
+  <!-- Todo el contenido visible -->
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <!-- Enlace para teclado/lector de pantalla: salta directo al contenido -->
+
+  <!-- ===================== SECCIÓN 1: HEADER ===================== -->
+  <header class="site-header" id="inicio-header">
+    <!-- Cabecera fija superior -->
+    <div class="container header-inner">
+      <!-- Contenedor centrado con ancho máximo -->
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <!-- Identidad profesional, enlaza al inicio -->
+        <span class="brand-name">Silvana Mariela Luna</span>
+        <!-- Marcador: reemplazar por el nombre real -->
+        <span class="brand-role">Lic. en Fonoaudiología</span>
+        <!-- Especialidad -->
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">
+        <!-- Botón hamburguesa (solo móvil). aria-expanded indica si el menú está abierto -->
+        <span class="nav-toggle-bar"></span>
+        <!-- Barra 1 del icono -->
+        <span class="nav-toggle-bar"></span>
+        <!-- Barra 2 del icono -->
+        <span class="nav-toggle-bar"></span>
+        <!-- Barra 3 del icono -->
+      </button>
+      <nav class="site-nav" id="menu-principal" aria-label="Navegación principal">
+        <!-- Menú de navegación por anclas -->
+        <ul class="nav-list">
+          <!-- Lista de enlaces -->
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <!-- Va a la sección de presentación -->
+          <li><a href="#servicios">Servicios</a></li>
+          <!-- Va a servicios -->
+          <li><a href="#proceso">Cómo trabajamos</a></li>
+          <!-- Va al proceso -->
+          <li><a href="#preguntas">Preguntas</a></li>
+          <!-- Va a preguntas frecuentes -->
+          <li><a class="btn btn-accent btn-small" href="#contacto">Solicitar un turno</a></li>
+          <!-- Botón destacado hacia contacto -->
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- Contenido principal único de la página -->
+
+    <!-- ===================== SECCIÓN 2: HERO ===================== -->
+    <section class="hero" id="inicio" aria-labelledby="hero-titulo">
+      <!-- Primera pantalla; aria-labelledby la asocia a su título -->
+      <div class="container hero-grid">
+        <!-- Grid de 2 columnas en escritorio, 1 en móvil -->
+        <div class="hero-text">
+          <!-- Columna de texto -->
+          <p class="eyebrow anim-up" style="--delay:0ms">Atención fonoaudiológica personalizada</p>
+          <!-- Texto pequeño superior; anim-up = entrada suave desde abajo, --delay = retraso -->
+          <h1 id="hero-titulo" class="anim-up" style="--delay:100ms">Acompañamiento fonoaudiológico para comunicarte con confianza</h1>
+          <!-- Titular principal (único h1 de la página) -->
+          <p class="lead anim-up" style="--delay:200ms">Un espacio de escucha donde evaluamos tus necesidades y diseñamos un plan a tu medida, a tu ritmo.</p>
+          <!-- Subtítulo con el beneficio, sin prometer resultados -->
+          <div class="hero-actions anim-up" style="--delay:300ms">
+            <!-- Grupo de botones -->
+            <a class="btn btn-accent" href="#contacto">Consultar disponibilidad</a>
+            <!-- CTA principal -->
+            <a class="btn btn-ghost" href="#servicios">Conocer los servicios</a>
+            <!-- CTA secundario -->
+          </div>
+        </div>
+        <figure class="hero-figure anim-fade" style="--delay:200ms">
+          <!-- Figura con la imagen principal -->
+          <img src="imagenes/fono_para_landing.jpg" width="900" height="1000" alt="Imagen ilustrativa de consulta fonoaudiológica (reemplazar por foto real)" fetchpriority="high" />
+          <!-- Imagen sin lazy porque está en la primera pantalla. Para usar tu foto: cambiá hero.svg por hero.jpg -->
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===================== SECCIÓN 3: SOBRE MÍ ===================== -->
+    <section class="section section-soft" id="sobre-mi" aria-labelledby="sobre-titulo">
+      <!-- Sección de presentación con fondo suave -->
+      <div class="container about-grid">
+        <!-- Grid: foto + texto -->
+        <figure class="about-figure reveal">
+          <!-- reveal = aparece al hacer scroll -->
+          <img src="imagenes/Captura de pantalla 2026-10-11 201555.png" width="800" height="900" alt="Retrato de la fonoaudióloga (reemplazar por foto real)" loading="lazy" />
+          <!-- loading="lazy": se descarga al acercarse. Reemplazar por profesional.jpg -->
+        </figure>
+        <div class="about-text reveal">
+          <!-- Columna de texto -->
+          <p class="eyebrow">Quién te acompaña</p>
+          <!-- Etiqueta superior -->
+          <h2 id="sobre-titulo">SILVANA MARIELA LUNA</h2>
+          <!-- Título de sección (h2) -->
+          <p>Soy Lic. en Fonoaudiología recibida de la Universidad Nacional de Tucuman y mi trabajo se centra en escuchar con atención cada situación para acompañar a cada persona de forma individual. Cuento con mas 20 años de trayectoria y experiencia laboral </p>
+          <!-- Texto humano; el marcador evita inventar datos -->
+          <p>Mi enfoque es claro y cercano: explico cada paso, defino objetivos junto con vos y los ajusto a medida que avanzamos.</p>
+          <!-- Enfoque de trabajo -->
+          <ul class="facts">
+            <!-- Datos profesionales -->
+            <li><strong>Formación:</strong> Licenciada en Fonoaudiología</li>
+            <!-- Marcador de formación -->
+            <li><strong>Matrícula:</strong> Matricula Profesional 462</li>
+            <!-- Marcador de matrícula -->
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECCIÓN 4: SERVICIOS ===================== -->
+    <section class="section" id="servicios" aria-labelledby="servicios-titulo">
+      <!-- Sección de servicios -->
+      <div class="container">
+        <!-- Contenedor -->
+        <header class="section-head reveal">
+          <!-- Encabezado de sección -->
+          <p class="eyebrow">Servicios</p>
+          <!-- Etiqueta -->
+          <h2 id="servicios-titulo">En qué puedo ayudarte</h2>
+          <!-- Título -->
+        </header>
+        <div class="cards">
+          <!-- Cuadrícula de tarjetas -->
+          <article class="card reveal" style="--delay:0ms">
+            <!-- Tarjeta 1 -->
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>
+            <!-- Icono de globo de diálogo (decorativo, oculto a lectores) -->
+            <h3>Desarrollo infantil temprano</h3>
+            <!-- Nombre del servicio -->
+            <p>Acompañamiento de las primeras etapas del desarrollo, trabajando la comunicación, el lenguaje y las habilidades orales para favorecer nuevos aprendizajes y la interacción con el entorno.</p>
+            <!-- Descripción concreta -->
+          </article>
+          <article class="card reveal" style="--delay:80ms">
+            <!-- Tarjeta 2 -->
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h3l2-6 4 12 2-6h3"/></svg>
+            <!-- Icono de onda -->
+            <h3>Trastornos del neurodesarrollo</h3>
+            <!-- Nombre -->
+            <p>Intervención fonoaudiológica adaptada a las necesidades de cada niño o adolescente, con objetivos orientados a fortalecer la comunicación, el lenguaje y su participación en la vida cotidiana.</p>
+            <!-- Descripción -->
+
+          </article>
+          <article class="card reveal" style="--delay:160ms">
+            <!-- Tarjeta 3 -->
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3zM6 11a6 6 0 0 0 12 0M12 17v4"/></svg>
+            <!-- Icono de micrófono -->
+            <h3>Lenguaje, habla y comunicación</h3>
+            <!-- Nombre -->
+            <p>Intervención fonoaudiológica adaptada a las necesidades de cada niño o adolescente, con objetivos orientados a fortalecer la comunicación, el lenguaje y su participación en la vida cotidiana.</p>
+            <!-- Descripción -->
+          </article>
+          <article class="card reveal" style="--delay:240ms">
+            <!-- Tarjeta 4 -->
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4h6M8 4h8v16H8zM10 9h4M10 13h4"/></svg>
+            <!-- Icono de planilla -->
+            <h3>Voz</h3>
+            <!-- Nombre -->
+            <p>Evaluación y tratamiento de las alteraciones vocales, trabajando la calidad, la coordinación y el uso eficiente de la voz para lograr una emisión más cómoda y funcional.</p>
+            <!-- Descripción -->
+          </article>
+          <article class="card reveal" style="--delay:320ms">
+            <!-- Tarjeta 5 -->
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 5.500-7 10-7 10z"/></svg>
+            <!-- Icono de corazón -->
+            <h3>Motricidad orofacial</h3>
+            <!-- Nombre -->
+            <p>Trabajo especializado sobre la movilidad, la coordinación y la funcionalidad de labios, lengua, mejillas y mandíbula, según las necesidades relacionadas con el habla y las funciones orales.</p>
+            <!-- Descripción -->
+          </article>
+          <article class="card reveal" style="--delay:0ms">
+            <!-- Tarjeta 1 -->
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>
+            <!-- Icono de globo de diálogo (decorativo, oculto a lectores) -->
+            <h3>Deglución</h3>
+            <!-- Nombre del servicio -->
+            <p>Evaluación e intervención de las dificultades para tragar, con estrategias individualizadas orientadas a favorecer una alimentación más segura y funcional.</p>
+            <!-- Descripción concreta -->
+          </article>
+          <article class="card reveal" style="--delay:80ms">
+            <!-- Tarjeta 2 -->
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h3l2-6 4 12 2-6h3"/></svg>
+            <!-- Icono de onda -->
+            <h3>Rehabilitación post-ACV</h3>
+            <!-- Nombre -->
+            <p>Rehabilitación fonoaudiológica después de un accidente cerebrovascular, enfocada en recuperar o compensar las dificultades del lenguaje, el habla, la comunicación y la deglución.</p>
+            <!-- Descripción -->
+          </article>
+          <article class="card reveal" style="--delay:160ms">
+            <!-- Tarjeta 3 -->
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3zM6 11a6 6 0 0 0 12 0M12 17v4"/></svg>
+            <!-- Icono de micrófono -->
+            <h3>Rehabilitación neurológica en adultos</h3>
+            <!-- Nombre -->
+            <p>Abordaje personalizado de las alteraciones de la comunicación y las funciones orales asociadas a condiciones neurológicas, con objetivos centrados en la autonomía y las necesidades de cada persona</p>
+            <!-- Descripción -->
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECCIÓN 5: BENEFICIOS ===================== -->
+    <section class="section section-soft" id="beneficios" aria-labelledby="beneficios-titulo">
+      <!-- Sección de propuesta de valor -->
+      <div class="container">
+        <header class="section-head reveal">
+          <!-- Encabezado -->
+          <p class="eyebrow">Qué vas a encontrar</p>
+          <!-- Etiqueta -->
+          <h2 id="beneficios-titulo">Un proceso pensado para vos</h2>
+          <!-- Título -->
+          <p>Cada persona es distinta, por eso no prometemos los mismos resultados para todos: trabajamos con objetivos reales y a tu ritmo.</p>
+          <!-- Aclaración honesta, sin garantías clínicas -->
+        </header>
+        <ul class="benefits">
+          <!-- Lista de beneficios en cuadrícula -->
+          <li class="reveal" style="--delay:0ms"><strong>Escucha y acompañamiento</strong><span>Un espacio tranquilo para contar tu situación.</span></li>
+          <!-- Beneficio 1 -->
+          <li class="reveal" style="--delay:80ms"><strong>Objetivos a medida</strong><span>Metas adaptadas a tus necesidades.</span></li>
+          <!-- Beneficio 2 -->
+          <li class="reveal" style="--delay:160ms"><strong>Orientación clara</strong><span>Te explico cada paso del proceso.</span></li>
+          <!-- Beneficio 3 -->
+          <li class="reveal" style="--delay:240ms"><strong>Comunicación cercana</strong><span>Podés consultarme tus dudas durante el proceso.</span></li>
+          <!-- Beneficio 4 -->
+          <li class="reveal" style="--delay:320ms"><strong>Seguimiento individual</strong><span>Revisamos avances y ajustamos el plan.</span></li>
+          <!-- Beneficio 5 -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== SECCIÓN 6: PROCESO ===================== -->
+    <section class="section" id="proceso" aria-labelledby="proceso-titulo">
+      <!-- Sección del recorrido del paciente -->
+      <div class="container">
+        <header class="section-head reveal">
+          <!-- Encabezado -->
+          <p class="eyebrow">Cómo trabajamos</p>
+          <!-- Etiqueta -->
+        </header>
+        <ol class="steps">
+          <!-- Lista ordenada de pasos -->
+          <li class="step reveal" style="--delay:0ms">
+            <!-- Paso 1 -->
+            <span class="step-num" aria-hidden="true">1</span>
+            <!-- Número decorativo -->
+            <h3>Contacto inicial</h3>
+            <!-- Título del paso -->
+            <p>Nos escribís y consultamos disponibilidad y lo que necesitás.</p>
+            <!-- Descripción -->
+          </li>
+          <li class="step reveal" style="--delay:100ms">
+            <!-- Paso 2 -->
+            <span class="step-num" aria-hidden="true">2</span>
+            <!-- Número -->
+            <h3>Evaluación y orientación</h3>
+            <!-- Título -->
+            <p>Según corresponda, conocemos tu situación y te oriento profesionalmente.</p>
+            <!-- Descripción -->
+          </li>
+          <li class="step reveal" style="--delay:200ms">
+            <!-- Paso 3 -->
+            <span class="step-num" aria-hidden="true">3</span>
+            <!-- Número -->
+            <h3>Plan y seguimiento</h3>
+            <!-- Título -->
+            <p>Cuando está indicado, armamos un plan personalizado y lo revisamos juntos.</p>
+            <!-- Descripción -->
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== SECCIÓN 7: PREGUNTAS FRECUENTES ===================== -->
+    <section class="section" id="preguntas" aria-labelledby="preguntas-titulo">
+      <!-- Sección de preguntas frecuentes -->
+      <div class="container narrow">
+        <!-- Contenedor angosto para lectura -->
+        <header class="section-head reveal">
+          <!-- Encabezado -->
+          <p class="eyebrow">Preguntas frecuentes</p>
+          <!-- Etiqueta -->
+          <h2 id="preguntas-titulo">Antes de consultar</h2>
+          <!-- Título -->
+        </header>
+        <div class="accordion reveal" id="acordeon">
+          <!-- Acordeón controlado por main.js -->
+          <div class="acc-item">
+            <!-- Ítem 1 -->
+            <h3 class="acc-heading"><button class="acc-trigger" aria-expanded="false" aria-controls="resp-1" id="preg-1">¿Cómo puedo solicitar un turno?</button></h3>
+            <!-- Botón accesible: aria-expanded cambia con JS -->
+            <div class="acc-panel" id="resp-1" role="region" aria-labelledby="preg-1"><div class="acc-inner"><p>Completá el formulario de contacto y elegí enviarlo por WhatsApp o por email. Vas a recibir respuesta para coordinar.</p></div></div>
+            <!-- Panel de respuesta; .acc-inner permite animar la altura -->
+          </div>
+          <div class="acc-item">
+            <!-- Ítem 2 -->
+            <h3 class="acc-heading"><button class="acc-trigger" aria-expanded="false" aria-controls="resp-2" id="preg-2">¿Cómo es la primera consulta?</button></h3>
+            <!-- Pregunta -->
+            <div class="acc-panel" id="resp-2" role="region" aria-labelledby="preg-2"><div class="acc-inner"><p>La primera consulta con los padres o tutores para recoleccion de informacion del niño o paciente.</p></div></div>
+            <!-- Marcador: no se inventa información -->
+          </div>
+          <div class="acc-item">
+            <!-- Ítem 3 -->
+            <h3 class="acc-heading"><button class="acc-trigger" aria-expanded="false" aria-controls="resp-3" id="preg-3">¿Qué información necesito para consultar?</button></h3>
+            <!-- Pregunta -->
+            <div class="acc-panel" id="resp-3" role="region" aria-labelledby="preg-3"><div class="acc-inner"><p>Alcanza con tu nombre, un medio de contacto y, si querés, un motivo general. No hace falta enviar datos de salud por el formulario.</p></div></div>
+            <!-- Respuesta -->
+          </div>
+          <div class="acc-item">
+            <!-- Ítem 4 -->
+            <h3 class="acc-heading"><button class="acc-trigger" aria-expanded="false" aria-controls="resp-4" id="preg-4">¿Dónde se realizan las sesiones?</button></h3>
+            <!-- Pregunta -->
+            <div class="acc-panel" id="resp-4" role="region" aria-labelledby="preg-4"><div class="acc-inner"><p>Centro medico Pieve Salud Gral. Guemes Calle Alberdi N°677</p></div></div>
+            <!-- Marcadores -->
+          </div>
+          <div class="acc-item">
+            <!-- Ítem 5 -->
+            <h3 class="acc-heading"><button class="acc-trigger" aria-expanded="false" aria-controls="resp-5" id="preg-5">¿Hay atención presencial o virtual?</button></h3>
+            <!-- Pregunta -->
+            <div class="acc-panel" id="resp-5" role="region" aria-labelledby="preg-5"><div class="acc-inner"><p>Presencial</p></div></div>
+            <!-- Marcador -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECCIÓN 9: CONTACTO ===================== -->
+    <section class="section contact" id="contacto" aria-labelledby="contacto-titulo">
+      <!-- Sección de conversión con fondo verde -->
+      <div class="container contact-grid">
+        <!-- Grid: texto + formulario -->
+        <div class="contact-text reveal">
+          <!-- Columna de texto -->
+          <p class="eyebrow eyebrow-light">Contacto</p>
+          <!-- Etiqueta -->
+          <h2 id="contacto-titulo">Consultá disponibilidad</h2>
+          <!-- Título -->
+          <p>Completá estos datos y elegí cómo enviar tu mensaje. Vos revisás el texto antes de enviarlo.</p>
+          <!-- Explicación -->
+          <p class="privacy-note">Esta página es estática: el formulario no guarda ni envía datos por sí solo. Al elegir un botón, se abre WhatsApp o tu app de correo con el mensaje listo. Por favor, no incluyas información clínica.</p>
+          <!-- Aviso de privacidad exigido -->
+        </div>
+        <form class="form reveal" id="form-contacto" novalidate>
+          <!-- novalidate: desactiva burbujas del navegador; validamos con JS accesible -->
+          <div class="field">
+            <!-- Campo nombre -->
+            <label for="nombre">Nombre</label>
+            <!-- Etiqueta asociada por for/id -->
+            <input type="text" id="nombre" name="nombre" autocomplete="name" required minlength="2" maxlength="80" aria-describedby="error-nombre" />
+            <!-- Entrada de texto; required/minlength = validación HTML -->
+            <p class="error" id="error-nombre" role="alert"></p>
+            <!-- Mensaje de error leído por lectores de pantalla -->
+          </div>
+          <div class="field">
+            <!-- Campo medio de contacto -->
+            <label for="contacto-medio">Teléfono o email de contacto</label>
+            <!-- Etiqueta -->
+            <input type="text" id="contacto-medio" name="contacto" autocomplete="off" required maxlength="80" aria-describedby="error-contacto" />
+            <!-- Entrada -->
+            <p class="error" id="error-contacto" role="alert"></p>
+            <!-- Error -->
+          </div>
+          <div class="field">
+            <!-- Campo motivo (opcional) -->
+            <label for="motivo">Motivo general (opcional)</label>
+            <!-- Etiqueta -->
+            <textarea id="motivo" name="motivo" rows="3" maxlength="300" placeholder="Ej.: consulta por lenguaje, voz, etc."></textarea>
+            <!-- Área de texto -->
+          </div>
+          <div class="form-actions">
+            <!-- Botones de envío -->
+            <button type="submit" class="btn btn-accent" data-canal="whatsapp">
+              <!-- Botón WhatsApp; data-canal le dice al JS qué canal usar -->
+              <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.700 13.600L3 21l4.500-1.200A9 9 0 1 0 12 3z"/></svg>
+              <!-- Icono de burbuja -->
+              Enviar por WhatsApp
+              <!-- Texto -->
+            </button>
+            <button type="submit" class="btn btn-light" data-canal="email">
+              <!-- Botón email -->
+              <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3zM3 7l9 7 9-7"/></svg>
+              <!-- Icono de sobre -->
+              Enviar por email
+              <!-- Texto -->
+          </div>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          <!-- Mensajes de estado (por ejemplo, contacto sin configurar) -->
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== SECCIÓN 10: FOOTER ===================== -->
+  <footer class="site-footer">
+    <!-- Pie de página -->
+    <div class="container footer-grid">
+      <!-- Grid del pie -->
+      <div>
+        <!-- Columna identidad -->
+        <p>Licenciada en Fonoaudiología · Matricula Profesional 462 </p>
+        <!-- Especialidad y matrícula -->
+      </div>
+      <nav aria-label="Enlaces del pie">
+        <!-- Navegación secundaria -->
+        <ul class="footer-links">
+          <!-- Enlaces -->
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <!-- Enlace -->
+          <li><a href="#servicios">Servicios</a></li>
+          <!-- Enlace -->
+          <li><a href="#preguntas">Preguntas</a></li>
+          <!-- Enlace -->
+          <li><a href="#contacto">Contacto</a></li>
+          <!-- Enlace -->
+        </ul>
+      </nav>
+      <div>
+        <!-- Columna contacto -->
+        <p>Centro medico Pieve Salud
+          Gral. Guemes 
+          Calle Alberdi N°677</p>
+        <!-- Marcador de ubicación -->
+        <!-- Marcador de horarios -->
+        <p>
+          <!-- Enlaces directos de contacto -->
+          <a href="#" id="link-whatsapp" hidden>WhatsApp</a>
+          <!-- Se muestra solo si el número está configurado (lo decide el JS) -->
+          <a href="#" id="link-email" hidden>Email</a>
+          <!-- Se muestra solo si el email está configurado -->
+        </p>
+      </div>
+    </div>
+    <p class="container footer-legal">© <span id="anio">2026</span> Silvana Luna Todos los derechos reservados.</p>
+    <!-- El año se actualiza con JS; 2026 es el valor de respaldo -->
+  </footer>
+
+  <script src="main.js"></script>
+  <!-- Carga el JS al final para no bloquear el renderizado -->
+</body>
+<!-- Fin del cuerpo -->
+</html>
+<!-- Fin del documento -->
